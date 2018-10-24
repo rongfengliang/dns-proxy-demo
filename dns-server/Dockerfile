@@ -17,4 +17,4 @@ COPY --from=build-env /go/src/github.com/m13253/dns-over-https/doh-server/doh-se
 COPY --from=build-env /go/src/github.com/m13253/dns-over-https/doh-server/doh-server.conf /app/doh-server.conf
 COPY --from=build-env /go/src/github.com/m13253/dns-over-https/doh-client/doh-client /app/doh-client
 COPY --from=build-env /go/src/github.com/m13253/dns-over-https/doh-client/doh-client.conf /app/doh-client.conf
-
+CMD [ "./doh-server" ]
