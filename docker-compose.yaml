@@ -1,0 +1,18 @@
+version: "3"
+services:
+  nginx:
+    image:
+    ports:
+    - "443:443"
+    - "8080:80"
+  dns-server:
+    image: dalongrong/doh-server
+    build: ./
+  dns-proxy:
+    image: dalongrong/dnscrypt-proxy
+    build: 
+      contet: ./dns-proxy
+      dockerfile: Dockerfile
+  doh:
+    image: dalongrong/doh-server
+    build: ./
