@@ -13,6 +13,3 @@ services:
     build: 
       context: ./dns-proxy
       dockerfile: Dockerfile
-  doh:
-    image: dalongrong/doh-server
-    build: ./
