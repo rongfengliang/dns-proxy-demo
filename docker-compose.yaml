@@ -13,7 +13,7 @@ services:
   dns-server:
     image: dalongrong/doh-server
     volumes:
-    - "./doh-server/doh-server.conf:/app/doh-server.conf"
+    - "./dns-server/doh-server.conf:/app/doh-server.conf"
     # build: 
     #   context: ./dns-server
     #   dockerfile: Dockerfile
