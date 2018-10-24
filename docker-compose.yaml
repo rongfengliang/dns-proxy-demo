@@ -7,8 +7,8 @@ services:
     - "8080:80"
     volumes:
     - "./nginx/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf"
-    - "./nginx/cert/cert1.pem:/usr/local/openresty/nginx/conf/cert1.pem"
-    - "./nginx/cert/privkey1.pem:/usr/local/openresty/nginx/conf/privkey1.pem"
+    - "./nginx/cert/apicaddy.com/cert1.pem:/usr/local/openresty/nginx/conf/cert1.pem"
+    - "./nginx/cert/apicaddy.com/privkey1.pem:/usr/local/openresty/nginx/conf/privkey1.pem"
 
   dns-server:
     image: dalongrong/doh-server
