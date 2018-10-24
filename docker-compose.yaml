@@ -4,7 +4,7 @@ services:
     image: openresty/openresty:alpine
     ports:
     - "443:443"
-    - "8080:80"
+    - "80:80"
     volumes:
     - "./nginx/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf"
     - "./nginx/cert/apicaddy.com/cert1.pem:/usr/local/openresty/nginx/conf/cert1.pem"
@@ -22,3 +22,6 @@ services:
     build: 
       context: ./dns-proxy
       dockerfile: Dockerfile
+    ports:
+    - "53:53/tcp"
+    - "53:53/udp"
