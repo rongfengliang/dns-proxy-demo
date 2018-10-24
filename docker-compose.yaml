@@ -11,7 +11,7 @@ services:
   dns-proxy:
     image: dalongrong/dnscrypt-proxy
     build: 
-      contet: ./dns-proxy
+      context: ./dns-proxy
       dockerfile: Dockerfile
   doh:
     image: dalongrong/doh-server
