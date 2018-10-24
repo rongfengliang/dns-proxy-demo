@@ -5,9 +5,15 @@ services:
     ports:
     - "443:443"
     - "8080:80"
+    volumes:
+    - "./nginx/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf"
+    - "./nginx/cert/:/usr/local/openresty/nginx/conf/"
+
   dns-server:
     image: dalongrong/doh-server
-    build: ./
+    build: 
+      context: ./dns-server
+      dockerfile: Dockerfile
   dns-proxy:
     image: dalongrong/dnscrypt-proxy
     build: 
