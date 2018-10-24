@@ -14,9 +14,9 @@ services:
     image: dalongrong/doh-server
     volumes:
     - "./dns-server/doh-server.conf:/app/doh-server.conf"
-    # build: 
-    #   context: ./dns-server
-    #   dockerfile: Dockerfile
+    build: 
+      context: ./dns-server
+      dockerfile: Dockerfile
   dns-proxy:
     image: dalongrong/dnscrypt-proxy
     build: 
