@@ -7,9 +7,11 @@ with docker && dokcer-compose build
 * build
 
 ```code
-
+docker-compose build
 ```
 
 * deploy
 
-
+```code
+docker-compose up -d
+```
